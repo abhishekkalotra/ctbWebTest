@@ -1,0 +1,18 @@
+[
+  {
+    "id": "BUG-LOGIN-001",
+    "caseId": "LOGIN-033",
+    "title": "Credential labels are not associated with their inputs",
+    "severity": "Major",
+    "priority": "High",
+    "impact": "The email control does not expose the approved accessible name, and navigation by associated field label is unavailable."
+  },
+  {
+    "id": "BUG-LOGIN-002",
+    "caseId": "LOGIN-028",
+    "title": "Authenticated login-route visits redirect to the dashboard instead of home",
+    "severity": "Major",
+    "priority": "Medium",
+    "impact": "Signed-in users visiting sign-in reach an unintended dashboard destination instead of the approved home page."
+  }
+]

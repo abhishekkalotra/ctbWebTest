@@ -1,0 +1,39 @@
+{
+  "name": "cartobike-web-test",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright smoke tests for the Cartobike website",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:list": "playwright test --list --reporter=list",
+    "report": "playwright show-report reports/playwright-report",
+    "typecheck": "tsc --noEmit",
+    "browsers:install": "playwright install firefox ffmpeg",
+    "test:login": "node scripts/run-login.mjs",
+    "test:login:headed": "node scripts/run-login.mjs --headed",
+    "verify:login": "node scripts/inspect-login.mjs",
+    "report:allure": "node scripts/serve-report.mjs --open",
+    "allure:generate": "node scripts/generate-allure.mjs",
+    "qa:sanitize": "node scripts/sanitize-artifacts.mjs",
+    "qa:report": "node scripts/build-reports.mjs",
+    "qa:package": "node scripts/package-deliverables.mjs",
+    "test:report-model": "node --test scripts/report-model.test.mjs",
+    "test:report-launcher": "node --test scripts/report-launcher.test.mjs"
+  },
+  "engines": {
+    "node": ">=22.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.6",
+    "allure-commandline": "2.46.1",
+    "allure-js-commons": "3.15.0",
+    "allure-playwright": "3.15.0",
+    "dotenv": "^18.0.10",
+    "typescript": "^7.0.2"
+  }
+}
